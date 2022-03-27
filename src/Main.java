@@ -1,3 +1,5 @@
+import ca.justinangue.ttc.TempArray;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -17,6 +19,8 @@ public class Main {
 
     Interface inter = new Interface();
     Info info = new Info();
+    TempArray ta = new TempArray();
+    Clicker click = new Clicker();
 
 
     public void init() {
@@ -33,6 +37,7 @@ public class Main {
             public void actionPerformed(ActionEvent e) {
                 info.startId = 1;
                 inter.displayOn();
+                click.displayOn();
                 System.out.println(info.startId);
             }
         });
@@ -46,6 +51,8 @@ public class Main {
         frame.setVisible(true);
 
         inter.init();
+        click.init();
+
     }
 
     public void Main() {
